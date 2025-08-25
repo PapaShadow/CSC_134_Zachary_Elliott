@@ -1,9 +1,9 @@
-//First program in C++
+// First program in C++
 // Name: Zachary Elliott
 // Date: 08-20-25
 
-#include <iostream> //calls the iostream library for input and output operations
-using namespace std; //calls the standard namespace
+#include <iostream> // calls the iostream library for input and output operations
+using namespace std; // calls the standard namespace
 
 int main() // main function where the program starts execution
 {
