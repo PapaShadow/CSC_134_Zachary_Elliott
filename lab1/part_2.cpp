@@ -1,6 +1,6 @@
 //@author: Zachary Elliott
 //@date: 08-27-25
-//@purpose: Lab 1 Part 2
+//@purpose: Lab 1 Part 2, divide by zero
 
 #include <iostream> //calls the iostream library for input and output operations
 using namespace std; //calls the standard namespace

@@ -23,9 +23,9 @@ int main() // main function where the program starts execution
         time2 = 4,
         distance2 = 400;
 
-    distance = calculateDistance(velocity, time); // call funtion
+    distance = calculateDistance(velocity, time); // call funtion pass in variables
 
-    velocity2 = findVelocity(distance2, time2); // call function
+    velocity2 = findVelocity(distance2, time2); // call function pass in variables
 
     cout << "The distance traveled while going " << velocity << "mph for "
         << time << " hours is " << distance << " miles." << endl; // display result for calc-distance

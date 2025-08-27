@@ -1,6 +1,6 @@
 //@author: Zachary Elliott
 //@date: 08-27-25
-//@purpose: Lab 1 Part 4
+//@purpose: Lab 1 Part 4, prints some info about me
 
 #include <iostream> //calls the iostream library for input and output operations
 using namespace std; //calls the standard namespace

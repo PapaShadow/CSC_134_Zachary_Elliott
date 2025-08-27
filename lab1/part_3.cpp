@@ -1,6 +1,6 @@
 //@author: Zachary Elliott
 //@date: 08-27-25
-//@purpose: Lab 1 Part 3
+//@purpose: Lab 1 Part 3, finds the square root of a number
 
 #include <cmath> // calls the cmath library for mathematical functions
 #include <iostream> //calls the iostream library for input and output operations
