@@ -1,6 +1,6 @@
 //@author: Zachary Elliott
 //@date: 08-27-25
-//@purpose: Lab 2 Part 1 and 2
+//@purpose: Lab 2 Part 1 and 2, finds distance and velocity based off of specifified variables
 
 #include <iostream> //calls the iostream library for input and output operations
 using namespace std; //calls the standard namespace
