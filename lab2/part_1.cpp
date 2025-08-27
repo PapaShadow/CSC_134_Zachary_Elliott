@@ -27,11 +27,11 @@ int main() // main function where the program starts execution
 
     velocity2 = findVelocity(distance2, time2); // call function pass in variables
 
-    cout << "The distance traveled while going " << velocity << "mph for "
-        << time << " hours is " << distance << " miles." << endl; // display result for calc-distance
+    std::cout << "The distance traveled while going " << velocity << "mph for "
+        << time << " hours is " << distance << " miles." << std::endl; // display result for calc-distance
 
-    cout << "The velocity calculated by traveling " << distance2 << " miles within "
-        << time2 << " hours is " << velocity2 << "mph." << endl; // display result for find-velocity
+    std::cout << "The velocity calculated by traveling " << distance2 << " miles within "
+        << time2 << " hours is " << velocity2 << "mph." << std::endl; // display result for find-velocity
 
     return 0; // returns 0 to indicate successful execution
 }

@@ -16,8 +16,8 @@ int main() // main function where the program starts execution
 
     voltage = calcVoltage(current, resist); // call function pass in variables
 
-    cout << "Given a current of " << current << " amps and a resitance of " << resist
-        << " ohms, the calculated voltage is " << voltage << " volts." << endl; // display result
+    std::cout << "Given a current of " << current << " amps and a resitance of " << resist
+        << " ohms, the calculated voltage is " << voltage << " volts." << std::endl; // display result
 
     return 0; // returns 0 to indicate successful execution
 }

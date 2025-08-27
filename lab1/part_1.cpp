@@ -11,7 +11,7 @@ int main() // main function where the program starts execution
 
     double sum = num1 + num2; // do the math
 
-    cout << "The sum of " << num1 << " and " << num2 << " is " << sum << endl; // display output using cout
+    std::cout << "The sum of " << num1 << " and " << num2 << " is " << sum << std::endl; // display output using cout
 
     return 0; // returns 0 to indicate successful execution
 }

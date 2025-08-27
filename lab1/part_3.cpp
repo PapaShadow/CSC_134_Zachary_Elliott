@@ -12,7 +12,7 @@ int main() // main function where the program starts execution
 
     double sum = sqrt(num1); // call sqrt funtion to do easy square root
 
-    cout << "The result of the square root of " << num1 << " is " << sum << endl; // spit out result
+    std::cout << "The result of the square root of " << num1 << " is " << sum << std::endl; // spit out result
 
     return 0; // returns 0 to indicate successful execution
 }

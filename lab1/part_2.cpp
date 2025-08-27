@@ -11,7 +11,7 @@ int main() // main function where the program starts execution
 
     double sum = num1 / zero; // do the math
 
-    cout << "The result of " << num1 << " divided by " << zero << " is " << sum << endl; // display output using cout
+    std::cout << "The result of " << num1 << " divided by " << zero << " is " << sum << std::endl; // display output using cout
 
     return 0; // returns 0 to indicate successful execution
 }
