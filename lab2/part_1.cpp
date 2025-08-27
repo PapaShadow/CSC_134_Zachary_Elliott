@@ -1,19 +1,47 @@
-// Lab 2 Part 1
-// Course: CSC 134
-// Name: Zachary Elliott
-// Date: 08-27-25
+//@author: Zachary Elliott
+//@date: 08-27-25
+//@purpose: Lab 2 Part 1 and 2
 
 #include <iostream> //calls the iostream library for input and output operations
 using namespace std; //calls the standard namespace
 
+
+// Function prototypes
+// prototypes must be declared before main
+// declaration order matters
+int calculateDistance(int, int);
+int findVelocity(int, int);
+
 int main() // main function where the program starts execution
 {
-    double velocity = 80.0, time = 2.0;
+    // declare variables for calc-distance
+    int velocity = 80.0, 
+        time = 2.0,
+        distance;
     
-    double distance = velocity * time; // math
+    int velocity2,
+        time2 = 4,
+        distance2 = 400;
+
+    distance = calculateDistance(velocity, time); // call funtion
+
+    velocity2 = findVelocity(distance2, time2); // call function
 
     cout << "The distance traveled while going " << velocity << "mph for "
-        << time << " hours is " << distance << " miles."; // display result
+        << time << " hours is " << distance << " miles." << endl; // display result for calc-distance
+
+    cout << "The velocity calculated by traveling " << distance2 << " miles within "
+        << time2 << " hours is " << velocity2 << "mph." << endl; // display result for find-velocity
 
     return 0; // returns 0 to indicate successful execution
+}
+
+int calculateDistance(int velocity,int time)
+{
+    return velocity * time;
+}
+
+int findVelocity(int distance, int time)
+{
+    return distance / time;
 }
