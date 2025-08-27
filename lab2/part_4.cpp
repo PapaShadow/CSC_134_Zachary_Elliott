@@ -17,8 +17,8 @@ int main() // main function where the program starts execution
 
     force = calcForce(mass, accel); // call function pass in variables
 
-    std::cout << "Given a mass of " << current << " amps and a resitance of " << resist
-        << " ohms, the calculated voltage is " << voltage << " volts." << std::endl; // display result
+    std::cout << "Given a mass of " << mass << "kg and an acceletarion of " << accel
+        << "m/s^2, the calculated force is " << force << std::endl; // display result
 
     return 0; // returns 0 to indicate successful execution
 }
