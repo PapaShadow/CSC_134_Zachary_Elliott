@@ -10,6 +10,7 @@ int calcVoltage(int current, int resistance); // function prototype
 
 int main() // main function where the program starts execution
 {
+    //declare variables
     int current = 10,
         resist = 2,
         voltage;
