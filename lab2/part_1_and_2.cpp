@@ -15,8 +15,8 @@ int findVelocity(int, int);
 int main() // main function where the program starts execution
 {
     // declare variables for calc-distance
-    int velocity = 80.0, 
-        time = 2.0,
+    int velocity = 80, 
+        time = 2,
         distance;
     
     int velocity2,
