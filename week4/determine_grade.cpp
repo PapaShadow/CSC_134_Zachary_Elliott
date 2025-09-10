@@ -8,7 +8,8 @@
 using namespace std; //calls the standard namespace
 
 double calc_avg(double, double, double);
-string determine_grade(double);
+char determine_grade(double);
+string print_message(char);
 
 int main()
 {
@@ -17,6 +18,8 @@ int main()
            grade2 = 0.00, 
            grade3 = 0.00,
            avg = 0.00; // made this for later use
+    
+    //char letter_grade;
 
     //asks the user for input
     std::cout << "Please Enter Grade 1: ";
@@ -26,9 +29,13 @@ int main()
     std::cout << "Please Enter Grade 3: ";
         std::cin >> grade3;
     
-    //call funtion to calc avg    
+    //call funtion to calc avg 
     //avg = calc_avg(grade1, grade2, grade3);
+    
+    //later use
+    //letter_grade = determine_grade(calc_avg(grade1, grade2, grade3));
 
+    //print out results while calling functions withing print statement.
     std::cout << " The average of the three grades is: " << fixed << setprecision(2) << calc_avg(grade1, grade2, grade3) << endl;
     std::cout << " Your letter grade is: " << determine_grade(calc_avg(grade1, grade2, grade3)) << endl;
 
@@ -42,31 +49,35 @@ double calc_avg(double grade1, double grade2, double grade3)
     return (grade1 + grade2 + grade3) / 3;
 }
 
-string determine_grade(double avg)
+//function to determine letter grade based on average
+char determine_grade(double avg)
 {
     if (avg >= 90)
     {
-        return "A";
+        return 'A';
     }
     else if (avg >= 80)
     {
-        return "B";
+        return 'B';
     }
     else if (avg >= 70)
     {
-        return "C";
+        return 'C';
     }
     else if (avg >= 60)
     {
-        return "D";
+        return 'D';
     }
     else 
     {
-        return "F";
+        return 'F';
     }
 }
 
-string print_message(string grade)
+/* saving this for later testing(breaking)
+string print_message(char grade)
 {
-
+    string message = "Your letter grade is: " + grade;
+    return message;
 }
+*/
