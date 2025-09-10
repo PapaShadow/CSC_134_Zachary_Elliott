@@ -15,7 +15,7 @@ int main()
     double grade1 = 0.00,
            grade2 = 0.00, 
            grade3 = 0.00,
-           avg = 0.00;
+           avg = 0.00; // made this for later use
 
     //asks the user for input
     std::cout << "Please Enter Grade 1: ";
