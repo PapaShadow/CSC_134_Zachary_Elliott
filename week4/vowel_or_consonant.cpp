@@ -61,6 +61,7 @@ bool isVowel(char userInput)
     // loop through the array and compare each to userInput
     //range based for loop to compare each value, thank you chapter 7.4
     // ch is being assigned each value in the array one at a time and comparing it to userInput
+    // only available in C++11 and later otherwise it would be a normal for loop with a counter.
     for (char ch : vowelArray)
     {
         if (userInput == ch)
