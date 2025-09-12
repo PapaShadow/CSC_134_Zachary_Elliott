@@ -67,7 +67,7 @@ bool isVowel(char userInput)
         if (userInput == ch)
         {
             isVowel = true;
-            break; // exit loop early if a match is found
+            break; // exit loop once a match is found
         }
     }
     return isVowel;
