@@ -1,6 +1,7 @@
 //@author: Zachary Elliott
 //@date: 09-12-25
-//@purpose: Week 4 lab 4, prompmts user for a character and determines if vowel or consonant
+//@purpose: Week 4 lab 4, prompmts user for a character and determines 
+// if the input is a vowel or consonant
 
 #include <iostream> //calls the iostream library for input and output operations
 #include <cctype>  // calls the cctype library for character handling functions
