@@ -10,9 +10,16 @@ using namespace std; //calls the standard namespace
 
 int main()
 {
+    char userInput = promptUser();
 
-    // flag to make sure input is a letter
-    bool isLetter = false;
+    if (isVowel(userInput))
+    {
+        cout << userInput << " is a vowel." << endl;
+    }
+    else
+    {
+        cout << userInput << " is not a vowel so it is a consonant." << endl;
+    }
 
     return 0;
 }
@@ -41,17 +48,38 @@ bool isVowel(char userInput)
     bool isVowel = false;
 
     // create an array with vowels in it
-    char vowels[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    char vowelArray[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+
+    // loop through the array and compare each to userInput
+    //range based for loop to compare each value, thank you chapter 7.4
+    // ch is being assigned each value in the array one at a time and comparing it to userInput
+    for (char ch : vowelArray)
+    {
+        if (userInput == ch)
+        {
+            isVowel = true;
+            break; // exit loop early if a match is found
+        }
+    }
+    return isVowel;
+
+
 }
 
 char promptUser()
 {
     // variable to store user input
     char userInput = ' ';
-
     // prompt for user input
-    cout << "Please enter a letter: " << endl;
-    cin >> userInput; // store user input in variable
+        cout << "Please enter a letter: " << endl;
+        cin >> userInput; // store user input in variable
+
+    while(!isCharacter(userInput))
+    {
+        cout << "Not a valid input, please enter a single letter: " << endl;
+        cin >> userInput;
+    }
+    
 
     return userInput;
 }
