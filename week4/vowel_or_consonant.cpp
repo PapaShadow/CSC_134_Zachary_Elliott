@@ -8,6 +8,11 @@
 
 using namespace std; //calls the standard namespace
 
+// function prototypes
+bool isVowel(char);
+char promptUser();
+bool isCharacter(char);
+
 int main()
 {
     char userInput = promptUser();
@@ -24,6 +29,7 @@ int main()
     return 0;
 }
 
+// bool function to check if input is just a letter
 bool isCharacter(char userInput)
 {
     // make bool flag set to false for my own sake
@@ -42,6 +48,7 @@ bool isCharacter(char userInput)
     return isLetter;
 }
 
+// bool function to check if input is a vowel or consonant
 bool isVowel(char userInput)
 {
     // flag for if its a vowel or not
@@ -66,6 +73,7 @@ bool isVowel(char userInput)
 
 }
 
+// finction to prompt user for input
 char promptUser()
 {
     // variable to store user input
@@ -74,6 +82,7 @@ char promptUser()
         cout << "Please enter a letter: " << endl;
         cin >> userInput; // store user input in variable
 
+    // some simple validation to make sure its a letter
     while(!isCharacter(userInput))
     {
         cout << "Not a valid input, please enter a single letter: " << endl;
