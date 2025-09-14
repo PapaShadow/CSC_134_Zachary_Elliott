@@ -85,6 +85,8 @@ char promptUser()
         cin >> userInput; // store user input in variable
 
     // some simple validation to make sure its a letter
+    // this can be done with isAlpha from cctype
+    // but i wanted to play with it for practice
     while(!isCharacter(userInput))
     {
         cout << "Not a valid input, please enter a single letter: " << endl;
