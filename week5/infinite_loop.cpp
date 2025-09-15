@@ -12,7 +12,7 @@ int main()
     //no counter
      while (count <= 1)
      {
-        std::cout << "This will never end." << std::endl;
+        std::cout << "This is infinite." << std::endl;
      }
 
     return 0;
