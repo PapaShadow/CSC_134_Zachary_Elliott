@@ -2,6 +2,7 @@
 //@date: 09-15-25
 //@purpose: Week 5 lab 2, committing a programming sin by creating an infinite loop
 #include <iostream>
+using namespace std;
 
 int main()
 {
