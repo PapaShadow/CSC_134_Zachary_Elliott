@@ -25,7 +25,8 @@ int main()
     }
 
     // output success message
-    std:: cout << "You have guessed correctyl!" << std::endl;
+    std:: cout << "The tempature has been successfully set, thank you!" << std::endl;
+    std:: cout << "This is a little warm for me, I'll be outside." << std::endl;
 
     return 0;
 }
