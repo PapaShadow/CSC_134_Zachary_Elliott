@@ -26,7 +26,7 @@ int main()
         std::cin >> gradeArray[i];
    }
 
-    average = calcAverage(gradeArray, 10);
+    average = calcAverage(gradeArray, SIZE);
 
     std::cout << "The average of the grades is: " << average << std::endl;
     
