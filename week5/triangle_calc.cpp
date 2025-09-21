@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
     // initialize height and length based off of requirements
-    double height = 4,
-           length = 3;
+    double height = 4.0,
+           length = 3.0;
 
     // make PI a constant because it never changes
     const double PI = 3.14159265358979323846;
