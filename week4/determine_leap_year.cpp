@@ -50,7 +50,7 @@ int main()
     {
         cout << userYear << " is a leap year." << endl;
     }
-    else if (isDivByFour(userYear) == true && notDivByHundred(userYear) != true)
+    else if (isDivByFour(userYear) && notDivByHundred(userYear))
     {
         cout << userYear << " is a leap year." << endl;
     }
@@ -104,11 +104,11 @@ bool notDivByHundred(int year)
 
     if (year % HUNDRED == 0)
     {
-        isValid = true;
+        isValid = false;
     }
     else
     {
-        isValid = false;
+        isValid = true;
     }
 
     return isValid;
