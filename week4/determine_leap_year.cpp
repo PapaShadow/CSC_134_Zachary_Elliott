@@ -8,6 +8,10 @@
 #include <iostream>
 using namespace std;    
 
+bool isDivByFour(int);
+bool isDivByFourHundred(int);
+bool notDivByHundred(int);
+
 int main()
 {
     // variable to hold user input
@@ -17,7 +21,7 @@ int main()
     // print statement with user prompt
     cout << "Enter a 4 digit year, for example 2024: ";
     cin >> userYear;
-
+/*
     // if series to check if what the user entered is a leap year
     // if divisible by 4 then it is a leap year
     if (userYear % 4 == 0)
@@ -40,6 +44,72 @@ int main()
     {
         cout << userYear << " is not a leap year." << endl;
     }
+*/
+
+    if(isDivByFourHundred(userYear))
+    {
+        cout << userYear << " is a leap year." << endl;
+    }
+    else if (isDivByFour(userYear) == true && notDivByHundred(userYear) != true)
+    {
+        cout << userYear << " is a leap year." << endl;
+    }
+    else
+    {
+        cout << userYear << " is not a leap year." << endl;
+    }
+
 
     return 0;
+}
+
+bool isDivByFour(int year)
+{
+    bool isValid = false;
+    int const FOUR = 4;
+
+    if (year % FOUR == 0)
+    {
+        isValid = true;
+    }
+    else
+    {
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+bool isDivByFourHundred(int year)
+{
+    bool isValid = false;
+    int const FOUR_HUNDRED = 400;
+
+    if (year % FOUR_HUNDRED == 0)
+    {
+        isValid = true;
+    }
+    else
+    {
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+bool notDivByHundred(int year)
+{
+    bool isValid = false;
+    int const HUNDRED = 100;
+
+    if (year % HUNDRED == 0)
+    {
+        isValid = true;
+    }
+    else
+    {
+        isValid = false;
+    }
+
+    return isValid;
 }
