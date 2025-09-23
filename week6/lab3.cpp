@@ -19,8 +19,6 @@ int main()
     // for counter that will count 0-99
     for(int i = 0; i < MAX_COUNT; i++)
     {
-        // prints out current index which is defined as i
-        std::cout << "Current count: " << i << std::endl;
         counter ++;
     }
 
