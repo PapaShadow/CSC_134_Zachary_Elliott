@@ -13,13 +13,16 @@ int main()
 {
     //create max count just for peace of mind
     int const MAX_COUNT = 100;
+    
+    // variable to start loop at
+    int minNum = 0;
 
     //this first so it doesnt repeat a 100 times over
     std::cout << "Number | Number Squared" << std::endl;
     std::cout << "------------------------" << std::endl;
 
     // for loop that will iterate 100 times starting at 0
-    for(int i = 0; i < MAX_COUNT; i++)
+    for(int i = minNum; i < MAX_COUNT; i++)
     {
         // formatted closely to need.
         // calls function to get the square root of i
