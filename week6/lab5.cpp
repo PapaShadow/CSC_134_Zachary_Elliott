@@ -26,7 +26,7 @@ int main()
     {
         // formatted closely to need.
         // calls function to get the square root of i
-        std::cout << i << "       " << doMath(i) << std::endl;
+        std::cout << i << "           " << doMath(i) << std::endl;
     }
 
     return 0;

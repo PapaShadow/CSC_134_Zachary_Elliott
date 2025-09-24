@@ -16,11 +16,12 @@ int main()
     //create max count just for peace of mind
     int const MAX_COUNT = 12;
 
-    std::cout << "Your Number | Multiple | Result " << std::endl;
-    std::cout << "--------------------------------" << std::endl;
-
+    
     int userValue = getUserInt();
     int multipleResult = 0;
+
+    std::cout << "Your Number | Multiple | Result " << std::endl;
+    std::cout << "--------------------------------" << std::endl;
 
     // for loop that will iterate 100 times starting at 0
     for(int i = 0; i <= MAX_COUNT; i++)

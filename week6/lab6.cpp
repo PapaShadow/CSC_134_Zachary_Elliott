@@ -15,7 +15,7 @@ int main()
     int sumOp = 0;
     int adder = 10;
 
-    // for loop that will iterate 100 times starting at 0
+    // for loop that will iterate 50 times starting at 0
     for(int i = 0; i < MAX_COUNT; i++)
     {
         sumOp += (i + adder);
