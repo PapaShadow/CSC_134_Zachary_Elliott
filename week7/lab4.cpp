@@ -10,22 +10,22 @@ int getUserInput();
 
 int main()
 {
-    // constant for some things
+    //constant for some things
    int const START = 1;
    int const ZERO = 0;
    int const EVEN = 2;
 
-   // initiate user input and set it to a function
+   //initiate user input and set it to a function
    int rowCount = getUserInput();
    
-   // outer loop for line count
+   //outer loop for line count
    for (int a = START; a <= rowCount; a++ )
    {
       for(int b = START; b <= rowCount; b++)
       {
         //use if statement to test if current iteration is even or odd
-        // if even we print *
-        // if not we use a space to "skip"
+        //if even we print *
+        //if not we use a space to "skip"
         if ((a+b) % EVEN == ZERO)
         {
             std::cout << "*";
@@ -35,8 +35,8 @@ int main()
             std::cout << " ";
         }
       }
-      // once we loop internally however many times and we jump out we make a new line
-      // after new line we add 1 to "a" and go again
+      //once we loop internally however many times and we jump out we make a new line
+      //after new line we add 1 to "a" and go again
       std::cout << std::endl;
    }
    return ZERO;
