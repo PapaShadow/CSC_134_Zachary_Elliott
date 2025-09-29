@@ -5,22 +5,21 @@
 #include <iostream>
 using namespace std;
 
-int getUserInput();
-
 int main()
 {
     // max and min values as constants
+   int const MAX = 10;
    int const START = 1;
-
-   int rowCount = getUserInput();
    
    // outer loop to track multiplying number
-   for (int a = START; a <= rowCount; a++ )
+   for (int a = START; a <= MAX; a++ )
    {
     // inner loop gets us the second multiplying number
-      for(int b = START; b <= rowCount; b++)
+      for(int b = START; b <= MAX; b++)
       {
-          std::cout << "*";
+        // this will multiply b*a then tab over
+        // this happens until b is = 10 then we jump out and restart outer loop
+        std::cout << (b * a) << "\t";
       }
       // once we loop internally 10 times and we jump out we make a new line
       // after new line we add 1 to a and go again
