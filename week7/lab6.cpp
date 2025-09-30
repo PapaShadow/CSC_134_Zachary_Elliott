@@ -1,9 +1,7 @@
 //@author: Zachary Elliott
 //@date: 09-29-25
-//@purpose: Week 7 lab 6, a program that asks the user to enter the amount that they have
-//  budgeted for a month. A loop should then prompt the user to enter each of their expenses
-//  for the month and keep a running total.
-//  When the loop finishes, the program should display the amount that the user is over or under budget.
+//@purpose: Week 7 lab 6, a program that tells the user if they are over or under budget
+// went a little crazy with it because my wife said i didnt do enough for a budget calculator
 
 #include <iostream>
 #include <iomanip>
