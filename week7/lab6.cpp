@@ -74,7 +74,7 @@ bool checkSpending(double budget, double totalExpenses)
     }
     else if (totalExpenses < budget)
     {
-        isValid = false;
+        isValid = true;
     }
     
     return isValid;
