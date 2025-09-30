@@ -19,11 +19,31 @@ int main()
     double budget = getBudget();
     int billCount = getBillCount();
     double totalExpenses = 0.0;
+    double overBudget = 0.0;
+    double underBudget = 0.0;
 
     for (int i = START; i <= billCount; i++)
     {
         double billCost = getExpense(i);
         totalExpenses += billCost;
+    }
+
+
+    overBudget = totalExpenses - budget;
+    underBudget = budget - totalExpenses;
+
+    if (checkIfOnBudget(budget, totalExpenses))
+    {
+        std::cout << "Your expenses are the same as your budget." << std::endl;
+        std::cout << "Consider finding places to cut back to increase savings." << std::endl;
+    }
+    else if (checkSpending(budget, totalExpenses) == false)
+    {
+        std::cout << "You are over budget by: $" << fixed << setprecision(2) << overBudget << std::endl;
+    }
+    else
+    {
+        std::cout << "You are under budget by: $" << fixed << setprecision(2) << underBudget << std::endl;
     }
 
     return 0;
@@ -55,6 +75,8 @@ bool checkSpending(double budget, double totalExpenses)
     {
         isValid = false;
     }
+    
+    return isValid;
 }
 
 double getBudget()
