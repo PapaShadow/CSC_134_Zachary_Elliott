@@ -9,6 +9,7 @@
 #include <iomanip>
 using namespace std;
 
+//function prototypes
 double getBudget();
 int getBillCount();
 double getExpense(int);
@@ -17,6 +18,7 @@ bool checkIfOnBudget(double, double);
 
 int main()
 {
+    //variable declarations
     int const START = 1;
     double budget = getBudget();
     int billCount = getBillCount();
@@ -24,15 +26,14 @@ int main()
     double overBudget = 0.0;
     double underBudget = 0.0;
 
+    //very simple for loop to grab and add up expenses
     for (int i = START; i <= billCount; i++)
     {
         double billCost = getExpense(i);
         totalExpenses += billCost;
     }
 
-    overBudget = totalExpenses - budget;
-    underBudget = budget - totalExpenses;
-
+    //final validation checks and outputs
     if (checkIfOnBudget(budget, totalExpenses))
     {
         std::cout << "Your expenses are the same as your budget." << std::endl;
@@ -40,10 +41,16 @@ int main()
     }
     else if (checkSpending(budget, totalExpenses) == false)
     {
+        //calc for over budget
+        //didnt have this tucked in here at first
+        //this led to me finding a bug so now we tuck it here to force an error
+        overBudget = totalExpenses - budget;
         std::cout << "You are over budget by: $" << fixed << setprecision(2) << overBudget << std::endl;
     }
     else
     {
+        //same thing as overBudget but for underBudget
+        underBudget = budget - totalExpenses;
         std::cout << "You are under budget by: $" << fixed << setprecision(2) << underBudget << std::endl;
     }
 
