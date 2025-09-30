@@ -12,6 +12,8 @@ using namespace std;
 double getBudget();
 int getBillCount();
 double getExpense(int);
+bool checkSpending(double, double);
+bool checkIfOnBudget(double, double);
 
 int main()
 {
@@ -27,7 +29,6 @@ int main()
         double billCost = getExpense(i);
         totalExpenses += billCost;
     }
-
 
     overBudget = totalExpenses - budget;
     underBudget = budget - totalExpenses;
