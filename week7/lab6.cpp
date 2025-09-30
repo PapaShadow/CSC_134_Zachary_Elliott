@@ -29,6 +29,34 @@ int main()
     return 0;
 }
 
+bool checkIfOnBudget(double budget, double totalExpenses)
+{
+    bool isValid = false;
+    if (totalExpenses == budget)
+    {
+        isValid = true;    
+    }
+    else
+    {
+        isValid = false;
+    }
+    return isValid;
+}
+
+bool checkSpending(double budget, double totalExpenses)
+{
+    bool isValid = true;
+
+    if (totalExpenses > budget)
+    {
+        isValid = false;    
+    }
+    else if (totalExpenses < budget)
+    {
+        isValid = false;
+    }
+}
+
 double getBudget()
 {
     double totalBudget = 0.0;
