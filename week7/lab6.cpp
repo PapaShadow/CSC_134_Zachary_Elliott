@@ -57,6 +57,10 @@ int main()
     return 0;
 }
 
+//function definitions
+
+//this is to check if we are exactly on budget
+//this is still bad
 bool checkIfOnBudget(double budget, double totalExpenses)
 {
     bool isValid = false;
@@ -71,6 +75,7 @@ bool checkIfOnBudget(double budget, double totalExpenses)
     return isValid;
 }
 
+//bool to check if we are over or under budget
 bool checkSpending(double budget, double totalExpenses)
 {
     bool isValid = true;
@@ -87,6 +92,7 @@ bool checkSpending(double budget, double totalExpenses)
     return isValid;
 }
 
+//function to get the budget from the user
 double getBudget()
 {
     double totalBudget = 0.0;
@@ -95,6 +101,8 @@ double getBudget()
     return totalBudget;
 }
 
+//gets number of bills
+//this is used for the for loop
 int getBillCount()
 {
     int count = 0;
@@ -104,6 +112,7 @@ int getBillCount()
     return count;
 }
 
+//gets the expense of whatever bill, based on loop index
 double getExpense(int i)
 {
     double expense = 0.0;
