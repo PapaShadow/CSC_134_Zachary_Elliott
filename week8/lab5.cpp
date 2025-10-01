@@ -26,7 +26,7 @@ int main()
     int const LOOP_COUNT = 3;
     
     //open file
-    ofstream input_file(filePath + fileName);
+    ofstream inputFile(filePath + fileName);
 
     for(int i = 0; i < LOOP_COUNT; i++)
     {
@@ -34,10 +34,10 @@ int main()
         string userVariable = getUserInput();
 
         //calls file object to write current loop index  
-        input_file << userVariable << "\n";
+        inputFile << userVariable << "\n";
     }
     //close file to free up memory
-    input_file.close();
+    inputFile.close();
     
     std::cout << "File is closed and done being written to." << std::endl;
 

@@ -21,18 +21,18 @@ int main()
                             "Dead Pool", "X-Men First Class","Star Wars Espisode V","Get Out"};
     
     //open file and write some stuff at the beginning.
-    ofstream input_file(filePath + fileName);
-    input_file << "Movie List\n";
-    input_file << "---------------\n";
+    ofstream inputFile(filePath + fileName);
+    inputFile << "Movie List\n";
+    inputFile << "---------------\n";
 
     for(int i = 0; i < SIZE; i++)
     {
-        input_file << movieArray[i] << "\n";
+        inputFile << movieArray[i] << "\n";
         //this was just to make sure it would behave like i wanted
         //std::cout << movieArray[i] << std::endl;
     }
     //close file to free up memory
-    input_file.close();                        
+    inputFile.close();                        
 
     return 0;                        
 }

@@ -27,15 +27,15 @@ int main()
     
     int userVariable = getUserInput();
     //open file
-    ofstream input_file(filePath + fileName);
+    ofstream inputFile(filePath + fileName);
 
     for(int i = 0; i < userVariable; i++)
     {
       //calls file object to write current loop index  
-      input_file << i << "\n";
+      inputFile << i << "\n";
     }
     //close file to free up memory
-    input_file.close();
+    inputFile.close();
     
     std::cout << "File is closed and done being written to." << std::endl;
 

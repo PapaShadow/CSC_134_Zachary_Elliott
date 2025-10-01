@@ -15,16 +15,16 @@ int main()
     string fileName = "\\lab2.txt";
     
     //open file and write some stuff at the beginning.
-    ofstream input_file(filePath + fileName);
-    input_file << "*************************************\n";
-    input_file << "\t\t\tShopping Cart\n";
-    input_file << "**************************************\n";
-    input_file << "product code\tqty\t\tprice\n";
-    input_file << "\t789\t\t\t7\t\t$12.00\n\n";
-    input_file << "\t\t\t\t\t\tTotal: $84.00";
+    ofstream inputFile(filePath + fileName);
+    inputFile << "*************************************\n";
+    inputFile << "\t\t\tShopping Cart\n";
+    inputFile << "**************************************\n";
+    inputFile << "product code\tqty\t\tprice\n";
+    inputFile << "\t789\t\t\t7\t\t$12.00\n\n";
+    inputFile << "\t\t\t\t\t\tTotal: $84.00";
 
     //close file to free up memory
-    input_file.close();                        
+    inputFile.close();                        
 
     return 0;                        
 }
