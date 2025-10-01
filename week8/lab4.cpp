@@ -9,7 +9,7 @@
 */
 //@author: Zachary Elliott
 //@date: 10-01-25
-//@purpose: Week 8 lab 1, using ofstream object to write some info into a text file
+//@purpose: Week 8 lab 4, request loop count, then writes current loop index into a file
 
 #include <iostream>
 #include <fstream>
