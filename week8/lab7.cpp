@@ -16,9 +16,10 @@ int main()
     //creating string variable for an easy to use path in all future code
     //this should make life easier for you
     string filePath = "C:\\Users\\shado\\CSC_134_Zachary_Elliott\\week8";
-    string fileName = "\\friends.txt";
+    string fileName = "\\numbers.txt";
 
-    string fileInfo;
+    int fileInfo;
+    int fileSum = 0;
     
     //open file and write some stuff at the beginning.
     ifstream inputFile(filePath + fileName);
@@ -30,9 +31,12 @@ int main()
     while(inputFile >> fileInfo )
     {
         std::cout << fileInfo << std::endl;
+        fileSum += fileInfo;
     }
     //close file to free up memory
-    inputFile.close();                        
+    inputFile.close();
+    
+    std::cout << fileSum << std::endl;
 
     return 0;                        
 }
