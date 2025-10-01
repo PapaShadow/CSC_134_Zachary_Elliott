@@ -21,7 +21,7 @@ int main()
     //creating string variable for an easy to use path in all future code
     //this should make life easier for you
     string filePath = "C:\\Users\\shado\\CSC_134_Zachary_Elliott\\week8";
-    string fileName = "\\lab4.txt";
+    string fileName = "\\lab5.txt";
 
     int const LOOP_COUNT = 3;
     
@@ -30,9 +30,11 @@ int main()
 
     for(int i = 0; i < LOOP_COUNT; i++)
     {
+        //variable and funtion to get a name
         string userVariable = getUserInput();
+
         //calls file object to write current loop index  
-        input_file << i << "\n";
+        input_file << userVariable << "\n";
     }
     //close file to free up memory
     input_file.close();
