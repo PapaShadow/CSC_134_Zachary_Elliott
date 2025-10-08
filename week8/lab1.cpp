@@ -25,9 +25,10 @@ int main()
     inputFile << "Movie List\n";
     inputFile << "---------------\n";
 
-    for(int i = 0; i < SIZE; i++)
+    //range based loop to cycle through the array
+    for(string movie : movieArray)
     {
-        inputFile << movieArray[i] << "\n";
+        inputFile << movie << "\n";
         //this was just to make sure it would behave like i wanted
         //std::cout << movieArray[i] << std::endl;
     }

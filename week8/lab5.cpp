@@ -47,10 +47,10 @@ int main()
 // simple function to get user input to count rows
 string getUserInput()
 {
-    string userCount = "";
+    string userInput = "";
 
     std::cout << "Type in your friends name: ";
-    std::cin >> userCount;
+    std::cin >> userInput;
 
-    return userCount;
+    return userInput;
 }

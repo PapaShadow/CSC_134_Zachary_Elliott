@@ -19,6 +19,8 @@ int main()
     string fileName = "\\numbers.txt";
 
     int fileInfo;
+
+    //variable to hold sum of numbers
     int fileSum = 0;
     
     //open file and write some stuff at the beginning.
