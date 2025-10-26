@@ -26,6 +26,8 @@ int main()
 
     ofstream inputFile(filePath + fileName);
 
+    inputFile << "Sales for the last " << loopCount << " day(s)" << std::endl;
+    inputFile << "==============================================" << std::endl;
     inputFile << fixed << setprecision(2);
 
     for(int i = 1; i <= loopCount; i++)
@@ -33,12 +35,14 @@ int main()
         userInput = getUserValue(i);
         finalTotal += userInput;
         
-        inputFile << "$" << userInput << "\n";
+        inputFile << "Day "<< i << ": $" << userInput << "\n";
 
         // this was used to write everything to console so i could see how it was writing
         //std::cout << "recording " << userInput << " for day " << i << "." << std::endl;
     }
-    inputFile << "$" << finalTotal;
+    inputFile << "==============================================" << std::endl;
+    inputFile << "Total: $" << finalTotal << std::endl;
+    inputFile << "==============================================";
     //close file to free up memory
     inputFile.close();
     
