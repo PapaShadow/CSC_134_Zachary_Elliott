@@ -20,35 +20,48 @@ bool isValid(int);
 
 int main()
 {
+    //variables to hold array sums
     int arraySum1 = 0;
     int arraySum2 = 0;
     int arraySum3 = 0;
+    //variable constants for array sizes
     int const SIZE1 = 16;
     int const SIZE2 = 15;
 
+    //test cards
     int testCard1[SIZE1] = {4,0,1,2,8,8,8,8,8,8,8,8,1,8,9,1};
     int testCard2[SIZE1] = {5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,4};       
     int testCard3[SIZE2] = {3,4,0,0,0,0,0,0,0,0,0,0,0,0,9}; 
 
+    //reverse used to flip the array 
     std::reverse(std::begin(testCard1), std::end(testCard1));
     std::reverse(std::begin(testCard2), std::end(testCard2));
     std::reverse(std::begin(testCard3), std::end(testCard3));
 
+    //for loops to go through each appropriate array
     for (int i = 0; i < SIZE1; i++)
     {
+        //pull out the index value and store it
         int indexValue = testCard1[i];
+        //test to see if index is even or odd
+        //if its odd, so index 1 we multiply the value
+        //this emulates "skipping every other" since odds will be the other
         if(i % 2 == 1)
         {
             indexValue *= 2;
 
+            //test to see if multiplying pushed us over 9 into double digits
+            //if it does we just subtract 9
             if(indexValue > 9)
             {
                 indexValue -= 9;
             }
         }
+        //store the sum into relate arraySum variable
         arraySum1 += indexValue;
     }
 
+    //rinse and repeat
     for (int i = 0; i < SIZE1; i++)
     {
         int indexValue = testCard2[i];
@@ -79,6 +92,8 @@ int main()
         arraySum3 += indexValue;
     }
 
+    //if else statements that call is valid which runs %10 on the appropriate sum
+    //returns the right print statement
     if (isValid(arraySum1))
     {
         validCard();
@@ -133,33 +148,3 @@ void notValidCard()
 {
     std::cout << "This is not a valid card" << std::endl;
 }
-
-/*
-public boolean validateCard(int[] array)
-    {
-        boolean isValid = false; //set isValid to false to start
-        int arraySum = 0; //holds array sum after all the weirdness
-
-        for (int i = 0; i < array.length; i++)
-        {
-            if (i % 2 == 0) //check if the element is even, these will be the elements we double
-            {
-                array[i] *= 2; //double value if element is even
-                if (array[i] > 9 ) //if value is greater then 9, subtract 9. This prevents us from having to break value into substring array and convert back
-                {
-                    array[i] -= 9;
-                }
-            }
-            arraySum += array[i]; //running total, this will add the calculated totals also for every other element in the array
-        }
-        if (arraySum % 10 == 0) //if sum is divisible by 10 with nothing left over
-        {
-            isValid = true; //set isValid to true
-        }
-        else //if modulus returns false
-        {
-           isValid = false; //set isValid to false
-        }
-        return isValid;
-    }
-*/
