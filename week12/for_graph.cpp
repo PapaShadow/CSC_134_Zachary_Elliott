@@ -1,5 +1,5 @@
 //@author: Zachary Elliott
-//@date: 10-27-25
+//@date: 11-10-25
 //@purpose: Week 12 linear graph lab. Program will use for loops to create a liner graph
 
 #include <iostream>
