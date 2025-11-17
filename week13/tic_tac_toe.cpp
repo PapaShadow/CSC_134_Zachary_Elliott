@@ -12,6 +12,7 @@
 //#include <fstream>
 //#include <iomanip>
 #include <string>
+using namespace std;
 
 char chooseToken(char, char);
 bool checkToken(char);
