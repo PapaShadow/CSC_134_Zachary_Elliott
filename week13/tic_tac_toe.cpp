@@ -166,7 +166,7 @@ bool checkBoard(const char board[3][3])
             }
     }
         
-        //Diagonal test
+    //Diagonal tests
     if ((board[0][0] == board[1][1]) && 
         (board[1][1] == board[2][2]) &&
         (board[0][0] == 'X' || board[0][0] == 'O'))
@@ -194,6 +194,8 @@ char choosePosition(std::string player)
     std::cout << player << " please choose a position 1-9: ";
     std::cin >> position;
 
+    //Cast int to character for the array spot comparisons later
+    //neccesary or else it leads to problems trying to insert X or O(oh) later on
     return static_cast<char>('0' + position);
 }
 
@@ -212,11 +214,14 @@ char chooseToken(char x, char o)
         std::cin >> userChoice;
     }
 
+    //make sure entry is converted to upper case, doing it here saves validation elsewhere
     return static_cast<char>(std::toupper(userChoice));
 }
 
 bool checkToken(char token)
 {
+    //double check to make sure the token entered is correct
+    //this is why we cast to upper in chooseToken
     bool valid = false;
     if (token == 'X' || token == 'O')
     {
@@ -234,21 +239,29 @@ void printBoard(const char board[3][3])
     //print format for the table
     for (int r = 0; r < 3; ++r)
     {
+        //start with a space
         std::cout << " ";
 
+        //prints column lines AFTER a space for spacing
         for (int c = 0; c < 3; ++c)
         {
+            //prints out value in r and c based on the loop counters r and c
+            //they reference the array index here
             std::cout << board[r][c];
             if (c < 2) 
             {
+                //less than 2 to make sure we only get 2 line seperations
                 std::cout << " | ";
             }
         }
 
+        //new line AFTER a row is "done"
         std::cout << '\n';
 
         if (r < 2) 
-        {
+        {   
+            //prints out seperator for the rows
+            //only want this done twice to prevent an extra line
             std::cout << "-----------\n";
         }
     }
