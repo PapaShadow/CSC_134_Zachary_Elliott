@@ -1,6 +1,6 @@
 /*
 @author: Zachary Elliott
-@Date: 11-24-26
+@Date: 12-3-26
 @Purpose: simple security system that checks the password from keypad
 */
 #include <Keypad.h>
@@ -10,7 +10,7 @@ int successDelay = 0;
 int ledGreen = 4 ; //this is the green LED pin
 const byte ROWS = 4 ; //this is the number of rows
 const byte COLS = 4 ; //this is the number of columns
-char  keyPadEntries[5];
+//char  keyPadEntries[5];
 char  keys[ROWS][COLS] = {{'1', '2', '3', 'A'},
                           {'4', '5', '6', 'B'},
                           {'7', '8', '9', 'C'},
@@ -18,14 +18,19 @@ char  keys[ROWS][COLS] = {{'1', '2', '3', 'A'},
                          };
 char enter = '#';
 //String correctPin[5] = {'1','4', '7', 'A', 'D'};
-String correctPin = "147AD";
 String userInput = "";
+String correctPin = "147AD";
 
 byte rowPins[ROWS] = {13, 12, 11, 10}; //keypad rows
 byte colPins[COLS] = {9, 8, 7, 6}; //keypad cols
 
+
+//built in function to find the key based on 
+//row column point
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
+
+//counter
 int keyPressCount = 0;
 
 
@@ -68,6 +73,7 @@ void loop()
       {
         userInput += key;
         Serial.println(key);
+        keyPressCount++;
           
       }
   }
@@ -75,6 +81,7 @@ void loop()
 void blinkGreen()
 {
 	digitalWrite(ledGreen, HIGH);
+  	Serial.println("Access Granted. Welcome Agent Bond");
 	delay(2500);
 	digitalWrite(ledGreen, LOW);
 }
@@ -82,6 +89,7 @@ void blinkGreen()
 void blinkRed()
 {
     digitalWrite(ledRed, HIGH);
+  	Serial.println("I don't know you! Thats my purse!");
     delay(2500);
     digitalWrite(ledRed, LOW);
 }
