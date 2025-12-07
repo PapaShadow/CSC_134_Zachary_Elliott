@@ -55,6 +55,8 @@ void loop()
   //if a key was pressed
   if (key)
   {
+    if(keyPressCount < 5)
+    {
       if(key == enter)
         {
           if(userInput == correctPin)
@@ -76,8 +78,15 @@ void loop()
 
         }
     }
+      else
+      {
+        blinkRed();
+        Serial.println(key);
+        userInput = "";
+        keyPressCount = 0;
+      }
   }
-
+}
 void blinkGreen()
 {
 	digitalWrite(ledGreen, HIGH);
