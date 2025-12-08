@@ -14,7 +14,10 @@ bool isPositive(double);
 double squareRoot (double, double, double);
 double negBPlusValue(double, double);
 double negBMinusValue(double, double);
-double divByTwo(double, double);
+double divByTwo(double);
+double combineAllMathBPlus();
+double combineAllMathBMinus();
+
 
 int main()
 {
@@ -26,7 +29,8 @@ int main()
     double xNegative = 0.0;
 
     //std:: cout << squareRoot(b, a, c) << std::endl; this was for testing purposes
-
+    std:: cout << combineAllMathBMinus() << std::endl;
+    std:: cout << combineAllMathBPlus() << std::endl;
 
 
 
@@ -59,12 +63,38 @@ double negBMinusValue(double b, double value)
     return result;
 }
 
-double divByTwo(double a, double value)
+double divByTwo(double a)
 {
-    double result = value / (2 * a);
+    double result = (2 * a);
 
     return result;
 }
+
+double combineAllMathBPlus()
+{
+    double a = -.01568;
+    double b = 1.0000;
+    double negativeB = -1.00000;
+    double c = 1.5;
+
+    double result = (negBPlusValue(negativeB, squareRoot(b, a, c))) / divByTwo(a);
+
+    return result;
+}
+
+double combineAllMathBMinus()
+{
+    double a = -.01568;
+    double b = 1.0000;
+    double negativeB = -1.00000;
+    double c = 1.5;
+
+    double result = (negBMinusValue(negativeB, squareRoot(b, a, c))) / divByTwo(a);
+
+    return result;
+}
+
+
 
 bool isPositive(double value)
 {
