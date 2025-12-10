@@ -15,8 +15,8 @@ double squareRoot (double, double, double);
 double negBPlusValue(double, double);
 double negBMinusValue(double, double);
 double divByTwo(double);
-double combineAllMathBPlus();
-double combineAllMathBMinus();
+double combineAllMathBPlus(double, double, double, double);
+double combineAllMathBMinus(double, double, double, double);
 
 
 int main()
@@ -29,11 +29,30 @@ int main()
     double xNegative = 0.0;
 
     //std:: cout << squareRoot(b, a, c) << std::endl; this was for testing purposes
-    std:: cout << combineAllMathBMinus() << std::endl;
-    std:: cout << combineAllMathBPlus() << std::endl;
+    //std:: cout << combineAllMathBMinus(a, b, negativeB, c) << std::endl;
+    //std:: cout << combineAllMathBPlus(a, b, negativeB, c) << std::endl;
 
+    if (isPositive(combineAllMathBMinus(a, b, negativeB, c)))
+    {
+        xPositive = combineAllMathBMinus(a, b, negativeB, c);
+    }
+    else
+    {
+        xNegative = combineAllMathBMinus(a, b, negativeB, c);
+    }
 
+    if (isPositive(combineAllMathBPlus(a, b, negativeB, c)))
+    {
+        xPositive = combineAllMathBPlus(a, b, negativeB, c);
+    }
+    else
+    {
+        xNegative = combineAllMathBPlus(a, b, negativeB, c);
+    }
 
+    std::cout<< "Positive Value: " << xPositive << " meters" << std::endl;
+    
+    return 0;
 }
 
 double squareRoot(double b, double a, double c)
@@ -70,31 +89,29 @@ double divByTwo(double a)
     return result;
 }
 
-double combineAllMathBPlus()
+double combineAllMathBPlus(double valueA, double valueB, double bNegative, double valueC)
 {
-    double a = -.01568;
-    double b = 1.0000;
-    double negativeB = -1.00000;
-    double c = 1.5;
+    double a = valueA;
+    double b = valueB;
+    double negativeB = bNegative ;
+    double c = valueC;
 
     double result = (negBPlusValue(negativeB, squareRoot(b, a, c))) / divByTwo(a);
 
     return result;
 }
 
-double combineAllMathBMinus()
+double combineAllMathBMinus(double valueA, double valueB, double bNegative, double valueC)
 {
-    double a = -.01568;
-    double b = 1.0000;
-    double negativeB = -1.00000;
-    double c = 1.5;
+    double a = valueA;
+    double b = valueB;
+    double negativeB = bNegative ;
+    double c = valueC;
 
     double result = (negBMinusValue(negativeB, squareRoot(b, a, c))) / divByTwo(a);
 
     return result;
 }
-
-
 
 bool isPositive(double value)
 {
